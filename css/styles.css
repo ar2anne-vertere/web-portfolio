@@ -1,0 +1,60 @@
+* {
+    font-family: Ubuntu !important;
+    color: #3C3C3B;
+}
+
+#custom-nav {
+    z-index: 3;
+}
+
+#logo {
+    font-weight: bolder;
+    position: relative;
+}
+
+#logo::after {
+    content: ".";
+    color: #F5D547;
+    font-size: 2em;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+}
+
+.text-custom-primary {
+    color: #F5D547;
+}
+
+.text-onyx {
+    color: #3C3C3B;
+}
+
+.bg-custom-primary {
+    background-color: #F5D547;
+}
+
+.bg-beige {
+    background-color: #EBEBD3;
+}
+
+#custom-banner>div:first-child {
+    z-index: 0;
+}
+
+#custom-banner>div:nth-child(2) {
+    position: relative;
+    z-index: 1 !important;
+}
+
+#dp {
+    transform: scaleX(-1);
+    filter: FlipH;
+    height: 100%;
+    width: auto;
+}
+
+.img-filter-red {
+    outline: 100px solid #DB3069AA;
+    outline-offset: -100px;
+    overflow: hidden;
+}
