@@ -7,20 +7,22 @@
     z-index: 3;
 }
 
+/* start logo */
 #logo {
     font-weight: bolder;
     position: relative;
 }
 
 #logo::after {
-    content: ".";
+    content: ";";
     color: #F5D547;
-    font-size: 2em;
     position: absolute;
-    bottom: 0;
-    right: -15px;
+    right: -10px;
 }
 
+/* end logo */
+
+/* start colors */
 .text-custom-primary {
     color: #F5D547;
 }
@@ -37,6 +39,13 @@
     background-color: #EBEBD3;
 }
 
+.bg-onyx {
+    background-color: #3C3C3B;
+}
+
+/* end colors */
+
+/* start banner */
 #custom-banner>div:first-child {
     z-index: 0;
 }
@@ -52,9 +61,36 @@
     height: 100%;
     width: auto;
 }
+/* end banner */
 
-.img-filter-red {
-    outline: 100px solid #DB3069AA;
-    outline-offset: -100px;
-    overflow: hidden;
+/* start custom ul */
+ol.ol-themed {
+    counter-reset: index;
+    padding: 0;
+    max-width: 300px;
 }
+
+ol.ol-themed li {
+    counter-increment: index;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    font-weight: bolder;
+}
+
+ol.ol-themed li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, #F5D547, #3C3C3B);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* end custom ul */
